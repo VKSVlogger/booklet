@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="style1.css">
+      </head>
+      <body>
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="Article.html">Article</a>
+            <a href="Contact.html">Contact</a>
+            <div class="dropdown">
+              <button class="dropbtn">Books
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div> 
+            <a href="#about" class="active">About</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>
+          <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script> 
+
+
+        <div class="about-section">
+            <h1>About Us</h1>
+            <p>This web page is made for entertainment purpos.</p>
+            <p>In this page you can read <font color="blue">Short Story, Poem, Quest </font> many more...</p>
+          </div>
+          
+          <h2 style="text-align:center">Our Team</h2>
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <img id="myImg" src="me1.jpg" alt="Vikash Mourya" style="width:100%;max-width:330px">
+                <div class="container">
+                  <h2>Vikash Mourya</h2>
+                  <p class="title">CEO & Founder</p>
+                  <p style="font-size: smaller;">This page was created by vikash mourya, currently in 4th semester pursuing a Diploma in Electrical Engineering at Government Polytechnic Purnea. To learn about Vikash Mourya and explore his portfolio visit our website.</p>
+                  <p>vik5264689@gmail.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <div class="gallery">
+                  <a target="_blank" href="Collage Campus.jpg">
+                    <img src="Collage Campus.jpg" alt="main gate" style="width:100%;max-width:330px">
+                  </a>
+                </div>
+                <div class="container">
+                  <h2>No Body</h2>
+                  <p class="title">Art Director</p>
+                  <p style="font-size: smaller;">Some text</p>
+                  <p>abcd123@gmail.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                  <div class="gallery">
+                    <a target="_blank" href="Collage Campus.jpg">
+                      <img src="Collage Campus.jpg" alt="main gate" style="width:100%;max-width:330px">
+                     </a>
+                  </div>
+                <div class="container">
+                  <h2>No Body</h2>
+                  <p class="title">Designer</p>
+                  <p style="font-size: smaller;">Some text</p>
+                  <p>abcd123@gmail.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+          <script>
+            var modal = document.getElementById("myModal");
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+            </script>
+
+          <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+            <div class="w3-xlarge w3-section">
+              <a href="About.html"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+              <i class="fa fa-instagram w3-hover-opacity"></i>
+              <i class="fa fa-snapchat w3-hover-opacity"></i>
+              <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+              <i class="fa fa-twitter w3-hover-opacity"></i>
+              <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+            <p>Powered by Vikash Mourya</p>
+           </footer>
+      </body>
+</html>
